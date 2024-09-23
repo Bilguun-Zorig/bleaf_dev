@@ -1,0 +1,334 @@
+.homePageContainer {
+    padding-bottom: 175px;
+    h1{
+        color: #1c2529;
+        padding-bottom: 45px;
+        padding-top: 95px;
+        text-align: center; 
+    }
+    .mainImg {
+        background-image: url('../../images/mainPage.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: 65vh; 
+        position: relative; 
+        text-align: center;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); 
+            z-index: 1; 
+        }
+
+        /* Content inside this div will be above the overlay */
+        div {
+            position: relative;
+        }
+        span {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2; 
+        }
+
+        span h1, span h4 {
+            color: white; 
+            padding-bottom: 0px;
+        }
+
+    }
+
+    div{
+        padding: 0;
+    }
+    .stackInfoContainer{
+        text-align: center;
+        h1 {
+            padding-top: 95px;
+        }
+        .stackContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            img{
+                width: 145px;
+                height: 125px;
+                padding: 15px 0px;
+            }
+            .stack{
+                border-color: #3CB371;
+                box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+                -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+                -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+                align-items: center;
+                h5{
+                    margin-bottom: 0px;
+                }
+                p{
+                    padding: 15px;
+                }
+
+            }
+
+        }
+    }
+
+    .programInfoContainer{
+        h1{
+            padding-bottom: 0px;
+        }
+        h3{
+            text-align: center; 
+            padding-bottom: 25px;
+        }
+        .programContainer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            h4{
+                padding-top: 25px;
+                margin: 0;
+            }
+            .program{
+                background-color: #1C252A;
+                border-radius: 12px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+                
+                .programInfo{
+                    border: 1px solid #3CB371;
+                    border-radius: 0.375rem;
+                    text-align: left;
+                    display: flex;
+                    gap: 1.5rem;
+                    align-items: center;
+                    padding: 0px 25px 25px;
+                    margin: 25px 45px 45px;
+                    i{
+                        color: white;
+                        font-size: 67px;
+                    }
+                    p{
+                        margin: 0;
+                        line-height: 2;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .curriculumContainer {
+            display: flex;
+            justify-content: center;
+    
+        .curriculum {
+            border: 1px solid #3CB371;
+            border-radius: 0.375rem;
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+            -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+            -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.16);
+            display: flex;
+            justify-content: center;
+            padding: 35px;
+            margin: 0;
+            .durationContainer {
+                --bs-nav-link-color: #1c2529;
+                --bs-nav-link-hover-color: #3CB371;
+                --bs-nav-pills-link-active-color: #1c2529;
+                --bs-nav-pills-link-active-bg: #3CB371;
+                padding-right: 12px;
+            }
+            .programInfoContainer {
+                padding-left: 12px;
+                h3{
+                    padding-bottom: 0px;
+                    margin: 0px;
+                    text-align: left;
+                }
+                ul{
+                    list-style: none;
+                    padding-left: 0;
+                }
+        
+                ul li::before{
+                    content: "✔";
+                    color: #3CB371;
+                    font-weight: bold;
+                    font-size: 18px;
+                    display: inline-block;
+                    width: 1em;
+                    margin-right: 10px;
+                }
+        
+            }
+    
+        }
+    
+
+        .mobileCurriculumContainer {
+            display: none;
+        }
+    }
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    
+    .homePageContainer{
+        padding-bottom: 55px;
+        .stackInfoContainer{
+            .stackContainer{
+                img{
+                    width: 95px;
+                    height: 90px;
+                    padding: 15px 0px;
+                }
+            }
+        }
+
+        .mainImg {
+            height: 35vh;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        .programInfoContainer{
+            h3{
+                padding-bottom: 15px;
+            }
+            .programContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+                .program{
+                    border-radius: 8px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    .programInfo{
+                        /* border-radius: 12px; */
+                        text-align: left;
+                        padding: 0px 12px 12px;
+                        margin: 12px 20px 20px;
+                        i{
+                            display: none;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        .curriculumContainer{
+            display: flex;
+            justify-content: center;
+            .curriculum{
+                padding: 25px;
+                .programInfoContainer, .durationContainer{
+                    display: none;
+                }
+                .mobileCurriculumContainer{
+                    display: flex;
+                    .carouselIndicators{
+                        margin-bottom: 0rem;
+                    }
+                    .carouselIndicators [data-bs-target]{
+                        background-color: #1c2529;
+                    }
+                    .programInfoMobileContainer{
+                        h5{
+                            font-size: 15px;
+                        }
+                        ul{
+                            list-style: none;
+                            padding-left: 0;
+                        }
+                        li{
+                            font-size: 12px;
+                        }
+                
+                        ul li::before{
+                            content: "✔";
+                            color: #3CB371;
+                            font-weight: bold;
+                            font-size: 12px;
+                            display: inline-block;
+                            width: 1em;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .homePageContainer{
+
+        .mainImg {
+            height: 35vh;
+        }
+        .stackInfoContainer{
+            .stackContainer{
+                img{
+                    width: 115px;
+                    height: 110px;
+                    padding: 15px 0px;
+                }
+            }
+        }
+
+        .programInfoContainer{
+            /* h1 {
+                padding-top: 95px;
+            } */
+            h3{
+                padding-bottom: 15px;
+            }
+            .programContainer{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+            }
+        }
+
+        .curriculumContainer{
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+}

@@ -1,0 +1,85 @@
+.navBarContainer{
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 3; 
+    .contactContainer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0px;
+        background-color: #1c2529;
+        padding: 10px;
+        .contact_1, .contact_2{
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            p{
+                color: white;
+            }
+            i{
+                font-size: 18px;
+                color: white;
+                padding-right: 10px;
+            }
+        }
+        .contact_1 p {
+            margin: auto 0;
+        }
+
+    }
+    .navBar {
+        background-color: white;
+        padding: 25px;
+        a{
+            text-decoration: none;
+        }
+        .bleafLogo{
+            margin-left: 35px;
+            padding: 15px;
+            border: 4px solid #3CB371;
+            width: 70px;
+            height: 70px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1c2529;
+            align-items: center;
+            border-bottom-right-radius: 75%;
+            border-top-left-radius: 75%;
+        }
+        .linkContainer{
+            margin-right: 35px;
+            margin-top: 12px;
+            --bs-navbar-active-color: #1c2529;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .navBarContainer{
+        .navBar {
+            padding: 16px;
+            .bleafLogo{
+                margin-left: 3px;
+                padding: 8px;
+                border: 2px solid #3CB371;
+                width: 35px;
+                height: 35px;
+                font-size: 10px;
+            }
+            .navbarToggle{
+                --bs-navbar-toggler-font-size: 0.8rem;
+            }
+        }
+        .contactContainer{
+            display: none;
+        }
+
+    }
+}
+
+
